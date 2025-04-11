@@ -53,52 +53,54 @@ class _CardPageState extends State<CardPage> {
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 18),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "${Data.basket.length} items",
-              style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 16,
-                  color: Colors.black54),
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            Divider(),
-            SizedBox(
-              height: 20,
-            ),
-            ListView.builder(
-              shrinkWrap: true,
-              itemCount: Data.basket.length,
-              itemBuilder: (context, index) {
-                return CardElementTile(
-                  basketElement: Data.basket[index],
-                  onPressed: () {
-                    DataController.removeOrDelete(
-                        context, Data.basket[index].product, () {
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "${Data.basket.length} items",
+                style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                    color: Colors.black54),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Divider(),
+              SizedBox(
+                height: 20,
+              ),
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: Data.basket.length,
+                itemBuilder: (context, index) {
+                  return CardElementTile(
+                    basketElement: Data.basket[index],
+                    onPressed: () {
+                      DataController.removeOrDelete(
+                          context, Data.basket[index].product, () {
+                        setState(() {});
+                      });
+                      log("Length: ${Data.basket.length.toString()}");
+                    },
+                    update: () {
                       setState(() {});
-                    });
-                    log("Length: ${Data.basket.length.toString()}");
-                  },
-                  update: () {
-                    setState(() {});
-                  },
-                );
-              },
-            ),
-          ],
+                    },
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
-      bottomSheet: Data.basket.isEmpty
+      bottomNavigationBar: Data.basket.isEmpty
           ? SizedBox.shrink()
           : ColoredBox(
               color: Colors.white,
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 20),
+                padding: EdgeInsets.symmetric(vertical: 20 , horizontal: 16),
                 child: CustomButton(
                   text: "text",
                   onPressed: () {},
