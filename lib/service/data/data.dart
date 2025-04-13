@@ -1,5 +1,6 @@
 import 'package:shopping_app/models/basket_model.dart';
 import 'package:shopping_app/models/product_model.dart';
+import 'package:shopping_app/models/user_model.dart';
 
 import '../../models/review_model.dart';
 
@@ -136,4 +137,8 @@ sealed class Data {
   ];
 
   static double sum = 0;
+
+  static List<User> users = [
+    User(name: "name", email: "email", password: "password")
+  ];
 }

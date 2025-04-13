@@ -4,8 +4,9 @@ import 'dart:math' hide log;
 import 'package:flutter/material.dart';
 import 'package:shopping_app/models/basket_model.dart';
 import 'package:shopping_app/models/product_model.dart';
-import 'package:shopping_app/pages/card_page/component/dialog.dart';
 import 'package:shopping_app/service/data/data.dart';
+
+import '../../pages/card/card_page/component/dialog.dart';
 
 sealed class DataController {
   static addToCard(Product product) {

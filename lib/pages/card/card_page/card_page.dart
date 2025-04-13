@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/companents/custom_button.dart';
 import 'package:shopping_app/companents/df_appbar.dart';
-import 'package:shopping_app/pages/card_page/component/card_element_tile.dart';
-import 'package:shopping_app/pages/card_page/component/dialog.dart';
-import 'package:shopping_app/pages/card_page/empty_card_page.dart';
 import 'package:shopping_app/service/data/data.dart';
 
-import '../../service/data/data_controller.dart';
+import '../../../service/data/data_controller.dart';
+import 'component/card_element_tile.dart';
+import 'component/dialog.dart';
+import 'empty_card_page.dart';
 
 class CardPage extends StatefulWidget {
   const CardPage({super.key});

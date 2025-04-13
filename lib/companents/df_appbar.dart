@@ -1,23 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/companents/custom_back_button.dart';
 
 AppBar defAppBar({required BuildContext context, required String title ,   Widget? additionalIcon ,}) {
   return AppBar(
     backgroundColor: Colors.white,
-    leading: GestureDetector(
-      onTap: () {
-        Navigator.pop(context);
-      },
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SizedBox(
-            width: 20,
-          ),
-          Icon(Icons.arrow_back_ios),
-          Text("Back"),
-        ],
-      ),
-    ),
+    leading: CustomBackButton(),
     leadingWidth: 100,
     bottom: Tab(
       child: Stack(

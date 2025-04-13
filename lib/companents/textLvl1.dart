@@ -5,14 +5,15 @@ import '../service/color_service.dart';
 
 class Textlvl1 extends StatelessWidget {
   final String text;
-  const Textlvl1({super.key, required this.text});
+  final Color? color;
+  const Textlvl1({super.key, required this.text, this.color});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: GoogleFonts.poppins(
-          color: AppColors.textColor,
+          color: color ?? AppColors.textColor,
           fontSize: 34,
           fontWeight: FontWeight.w500),
     );

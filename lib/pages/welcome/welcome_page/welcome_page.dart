@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/companents/custom_button.dart';
-import 'package:shopping_app/pages/product_list_page.dart';
 import 'package:shopping_app/service/color_service.dart';
+
+import '../../auth/sign_in_page/sign_in_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -53,7 +54,7 @@ class WelcomePage extends StatelessWidget {
                     Navigator.pushReplacement(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => ProductListPage()));
+                            builder: (context) => SignInPage()));
                   },
                 ),
                 SizedBox(

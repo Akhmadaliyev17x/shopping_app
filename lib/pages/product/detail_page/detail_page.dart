@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/companents/custom_button.dart';
-import 'package:shopping_app/pages/card_page/card_page.dart';
-import 'package:shopping_app/pages/reviews_page.dart';
 import 'package:shopping_app/service/data/data_controller.dart';
 
-import '../companents/rate_stars.dart';
-import '../companents/textLvl1.dart';
-import '../models/product_model.dart';
-import '../service/color_service.dart';
+import '../../../companents/rate_stars.dart';
+import '../../../companents/textLvl1.dart';
+import '../../../models/product_model.dart';
+import '../../../service/color_service.dart';
+import '../../card/card_page/card_page.dart';
+import '../reviews_page/reviews_page.dart';
 
 class DetailPage {
   BuildContext context;

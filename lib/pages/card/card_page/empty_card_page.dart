@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shopping_app/companents/custom_button.dart';
-import 'package:shopping_app/pages/product_list_page.dart';
+
+import '../../product/products_list_page/product_list_page.dart';
 
 class EmptyCardPage extends StatelessWidget {
   const EmptyCardPage({super.key});
