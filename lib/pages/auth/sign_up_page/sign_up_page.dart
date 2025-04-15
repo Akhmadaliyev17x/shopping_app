@@ -10,7 +10,7 @@ import '../congratulations_page/congratulations_page.dart';
 import '../sign_in_page/sign_in_page.dart';
 
 class SignUpPage extends StatefulWidget {
-  SignUpPage({super.key});
+  const SignUpPage({super.key});
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();

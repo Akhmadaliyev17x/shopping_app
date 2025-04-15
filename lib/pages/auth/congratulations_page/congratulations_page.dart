@@ -7,7 +7,12 @@ import 'package:shopping_app/service/color_service.dart';
 import '../sign_in_page/sign_in_page.dart';
 
 class CongratulationsPage extends StatelessWidget {
-  const CongratulationsPage({super.key});
+  final String? t1;
+  final String? t2;
+  final String? buttonText;
+
+  final VoidCallback? onPressed;
+  const CongratulationsPage({super.key, this.t1, this.t2, this.onPressed, this.buttonText});
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +35,10 @@ class CongratulationsPage extends StatelessWidget {
               Spacer(),
               Textlvl1(text: "Congratulations" , color: AppColors.textColorOch,),
               SizedBox(height: 18,),
-              Text("Your Account has been"),
-              Text("successfully created."),
+              Text(t1 ?? "Your Account has been"),
+              Text(t2 ?? "successfully created."),
               Spacer(),
-              CustomButton(text: "Sign In" , onPressed: (){
+              CustomButton(text: buttonText ?? "Sign In" , onPressed : onPressed ?? (){
                 Navigator.pushReplacement(context, DialogRoute(context: context, builder: (context)=>SignInPage()));
               },width: double.infinity,)
             ],

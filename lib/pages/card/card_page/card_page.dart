@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/companents/custom_button.dart';
 import 'package:shopping_app/companents/df_appbar.dart';
+import 'package:shopping_app/pages/checkout_payment/shipping_address/shipping_adress.dart';
 import 'package:shopping_app/service/data/data.dart';
 
 import '../../../service/data/data_controller.dart';
@@ -103,7 +104,9 @@ class _CardPageState extends State<CardPage> {
                 padding: EdgeInsets.symmetric(vertical: 20 , horizontal: 16),
                 child: CustomButton(
                   text: "text",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, CupertinoPageRoute(builder: (context)=> ShippingAddress()));
+                  },
                   height: 84,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
